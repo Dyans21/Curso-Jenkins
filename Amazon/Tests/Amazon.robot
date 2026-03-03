@@ -16,8 +16,8 @@ User must sign in to check out
     Set selenium speed      .2s
     Set selenium timeout    5s
 
-    Open Browser    https://www.amazon.mx    chrome
-
+   Open Browser    https://www.amazon.com    chrome          options=add_argument(--headless);add_argument(--no-sandbox);add_argument(--disable-dev-shm-usage)
+   
     # resize browser window for recording
     Set window position     x=341  y=169
     #Set window size         width=1935  height=1090

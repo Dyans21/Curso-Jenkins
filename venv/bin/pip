@@ -1,4 +1,4 @@
-#!/home/dyansdev/Documentos/Curso_Jenkins/venv/bin/python3
+#!/home/dyansdev/Documentos/Curso_Jenkins/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
