@@ -16,7 +16,8 @@ User must sign in to check out
     Set selenium speed      .2s
     Set selenium timeout    5s
 
-   Open Browser    https://www.amazon.com    chrome 
+   #Open Browser    https://www.amazon.com    chrome 
+       Open Browser    https://www.amazon.com    chrome    options=add_argument("--headless")
    
     # resize browser window for recording
     Set window position     x=341  y=169
