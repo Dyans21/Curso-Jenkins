@@ -2,29 +2,27 @@
 Documentation   This is some basic info about the whole suite
 Library         SeleniumLibrary
 
-# robot -d results Tests/Amazon.robot
-
 *** Variables ***
-#${BROWSER}    chrome
+${BROWSER}          chrome
+
 
 *** Test Cases ***
 User must sign in to check out
     [Documentation]  This is some basic info about the test
     [Tags]  Smoke
 
-    #Initialize Selenium
-    Set Selenium Speed      .2s
+    # Initialize Selenium
+    Set Selenium Speed      0.2s
     Set Selenium Timeout    5s
 
-    # Open Browser parametrizable
-    #Open Browser    https://www.amazon.com    ${BROWSER}   
-     Open Browser    https://www.amazon.com    chrome  
-
-    # resize browser window for recording
-    Set Window Position     x=341  y=169
-    Set Window Size         width=1024  height=700
+    # Open browser in Sauce Labs
+    Open Browser            http://www.amazon.com    ${BROWSER}
+    # Resize browser window for recording
+    Set Window Position     341  169
+    Set Window Size         1024  700
     Maximize Browser Window
 
+    # Buscar un producto y agregar al carrito
     Input Text              id=twotabsearchtextbox    Ferrari 458
     Click Button            id=nav-search-submit-button
     Wait Until Page Contains    Resultados
