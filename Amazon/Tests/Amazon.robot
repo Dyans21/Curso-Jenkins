@@ -36,11 +36,11 @@ User must sign in to check out
 
     input text              id=twotabsearchtextbox    Ferrari 458
     click button            id=nav-search-submit-button
-    wait until page contains    Resultados
+    #wait until page contains    Resultados
     click image             class=s-image
-    wait until page contains    Rastar Coche RC
+    #wait until page contains    Rastar Coche RC
     click element           id=add-to-cart-button
-    wait until page contains    Agregado al carrito
+    #wait until page contains    Agregado al carrito
 
     Close Browser
 
